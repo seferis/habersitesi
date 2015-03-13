@@ -12,3 +12,4 @@ gem 'spring',        group: :development
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem 'simple_form', '~> 3.1.0'
