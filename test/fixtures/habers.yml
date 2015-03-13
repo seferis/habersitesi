@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  baslik: MyString
+  aciklamasi: MyText
+  resim: MyString
+  kaynagi: MyString
+
+two:
+  baslik: MyString
+  aciklamasi: MyText
+  resim: MyString
+  kaynagi: MyString

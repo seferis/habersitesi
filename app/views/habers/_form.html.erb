@@ -1,0 +1,52 @@
+<%= form_for @haber, :html => { :class => "form-horizontal haber" } do |f| %>
+
+    <% if @haber.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@haber.errors.count, "error") %> prohibited this haber from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @haber.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :baslik, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :baslik, :class => 'form-control' %>
+    </div>
+    <%= error_span(@haber[:baslik]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :aciklamasi, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :aciklamasi, :class => 'form-control' %>
+    </div>
+    <%= error_span(@haber[:aciklamasi]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :resim, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :resim, :class => 'form-control' %>
+    </div>
+    <%= error_span(@haber[:resim]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :kaynagi, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :kaynagi, :class => 'form-control' %>
+    </div>
+    <%= error_span(@haber[:kaynagi]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            habers_path, :class => 'btn btn-default' %>
+
+<% end %>
